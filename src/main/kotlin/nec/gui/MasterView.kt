@@ -27,7 +27,7 @@ class MasterView : View("Not Enough Calculation") {
                     isMnemonicParsing = true
 
                     item("Add recipe", "Shortcut+n").action {
-                        find<RecipeSearchView>().openWindow(stageStyle = StageStyle.UNIFIED)
+                        find<RecipeSearchView>().openWindow(stageStyle = StageStyle.DECORATED)
                     }
                     separator()
                     item("Clear all").action {
