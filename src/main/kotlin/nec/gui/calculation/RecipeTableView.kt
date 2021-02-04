@@ -102,7 +102,7 @@ class RecipeTableView : View() {
         find<RecipeSearchView>(
             "query" to "item:${item.id}",
             "searchMode" to if (itemAmount.isIngredient) ItemSearchMode.OUTPUT_ONLY else ItemSearchMode.INPUT_ONLY
-        ).openWindow(stageStyle = StageStyle.UNIFIED)
+        ).openWindow(stageStyle = StageStyle.DECORATED)
     }
 
     private fun onRecipeItemClick(event: MouseEvent, selection: RecipeSelection, itemAmount: ItemAmount) {
@@ -120,7 +120,7 @@ class RecipeTableView : View() {
                 "oreDicts" to oreDicts,
                 "forRecipeId" to selection.recipeId,
                 "forOreSlot" to itemAmount.oreDictSlot,
-            ).openWindow(stageStyle = StageStyle.UNIFIED)
+            ).openWindow(stageStyle = StageStyle.DECORATED)
         }
     }
 
